@@ -79,7 +79,6 @@ const isValid = verifyEOTSSignature(
 ### Running Examples
 
 ```bash
-npm run example          # Basic usage example
 npm run demo:vulnerability  # Claim reuse protection demo
 ```
 
