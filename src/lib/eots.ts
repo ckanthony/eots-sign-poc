@@ -126,6 +126,11 @@ export function verifyEOTSSignature(
   // Convert signature scalar
   const s = BigInt("0x" + sHex);
   
+  // Validate that s is within the valid range for secp256k1
+  if (s >= CURVE.n || s <= 0n) {
+    return false;
+  }
+  
   // Compute s·G
   const sG = Point.BASE.multiply(s);
 
